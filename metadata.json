@@ -1,0 +1,6 @@
+{
+  "name": "Savean",
+  "description": "AI Chat Bot designed like Gemini AI to organize thoughts, set personal goals, track daily progress, and safeguard user privacy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

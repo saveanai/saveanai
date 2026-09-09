@@ -1,0 +1,63 @@
+{
+  "entities": {
+    "UserProfile": {
+      "collection": "users",
+      "fields": {
+        "displayName": { "type": "string" },
+        "email": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "mfaEnabled": { "type": "boolean" },
+        "mfaMethod": { "type": "string" },
+        "encryptionEnabled": { "type": "boolean" },
+        "preferences": { "type": "map" }
+      }
+    },
+    "Conversation": {
+      "collection": "users/{userId}/conversations",
+      "fields": {
+        "title": { "type": "string" },
+        "preview": { "type": "string" },
+        "isEncrypted": { "type": "boolean" },
+        "isPinned": { "type": "boolean" },
+        "tags": { "type": "array" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    },
+    "Message": {
+      "collection": "users/{userId}/conversations/{convId}/messages",
+      "fields": {
+        "role": { "type": "string" },
+        "content": { "type": "string" },
+        "isEncrypted": { "type": "boolean" },
+        "timestamp": { "type": "timestamp" }
+      }
+    },
+    "Goal": {
+      "collection": "users/{userId}/goals",
+      "fields": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "progress": { "type": "number" },
+        "status": { "type": "string" },
+        "targetDate": { "type": "string" },
+        "milestones": { "type": "array" },
+        "isEncrypted": { "type": "boolean" },
+        "createdAt": { "type": "timestamp" }
+      }
+    },
+    "DailyTracking": {
+      "collection": "users/{userId}/daily_tracking",
+      "fields": {
+        "date": { "type": "string" },
+        "mood": { "type": "string" },
+        "clarityScore": { "type": "number" },
+        "completedHabits": { "type": "array" },
+        "notes": { "type": "string" },
+        "updatedAt": { "type": "timestamp" }
+      }
+    }
+  }
+}
